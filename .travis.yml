@@ -8,7 +8,7 @@ before_install:
   - hiptest-publisher -c javascript-qunit.conf --only=tests --test-run-id=1966
 
 script:
-  - grunt qunit
+  - grunt qunit_junit qunit
 
 after_script:
   - hiptest-publisher -c javascript-qunit.conf --push=_build/test-reports/TEST-index.xml --test-run-id=1966
