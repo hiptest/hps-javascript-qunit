@@ -106,7 +106,6 @@
 
 
   test('No messages are displayed when machine is shut down', function () {
-    // Tags: plop
     // Given the coffee machine is started
     this.actionwords.theCoffeeMachineIsStarted();
     // When I shutdown the coffee machine
