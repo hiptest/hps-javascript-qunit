@@ -1,5 +1,5 @@
 var Actionwords = {
-  iStartTheCoffeeMachine: function (lang) {
+  iStartTheCoffeeMachineUsingLanguageLang: function (lang) {
     this.sut.start(lang);
   },
 
@@ -57,7 +57,7 @@ var Actionwords = {
   },
 
   theCoffeeMachineIsStarted: function () {
-    this.iStartTheCoffeeMachine();
+    this.iStartTheCoffeeMachineUsingLanguageLang();
   },
 
   iHandleWaterTank: function () {
@@ -88,5 +88,23 @@ var Actionwords = {
   iHandleEverythingExceptTheGrounds: function () {
     this.iHandleWaterTank();
     this.iHandleBeans();
+  },
+
+  displayedMessageIs: function (__free_text) {
+    this.messageMessageShouldBeDisplayed(__free_text);
+  },
+
+  iSwitchToSettingsMode: function () {
+    this.sut.showSettings();
+  },
+
+  settingsShouldBe: function (__datatable) {
+    let settings = {}
+    __datatable.split("\n").forEach(line => {
+      let cells = line.split('|');
+      settings[cells[1].trim()] = cells[2].trim();
+    })
+
+    deepEqual(settings, this.sut.getSettings());
   }
 };

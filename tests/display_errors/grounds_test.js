@@ -3,9 +3,6 @@
     setup: function () {
       this.actionwords = Object.create(Actionwords);
       this.actionwords.sut = CoffeeMachine();
-      // As a coffee lover
-      // I have to empty the grounds
-      // So I don't end up with a total mess around the coffee machine
       // Given the coffee machine is started
       this.actionwords.theCoffeeMachineIsStarted();
       // And I handle everything except the grounds

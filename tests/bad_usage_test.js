@@ -1,5 +1,5 @@
 (function () {
-  module('Weird specs', {
+  module('Bad usage', {
     setup: function () {
       this.actionwords = Object.create(Actionwords);
       this.actionwords.sut = CoffeeMachine();
