@@ -1,13 +1,13 @@
 # hps-javascript-qunit
 [![Build Status](https://travis-ci.org/hiptest/hps-javascript-qunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-qunit)
 
-Hiptest publisher samples with <language>/<framework>
+Hiptest publisher samples with Javascript/qUnit
 
-In this repository you'll find tests generated in <language>/<framework> format from [Hiptest](https://hiptest.net), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
+In this repository you'll find tests generated in Javascript/qUnit format from [Hiptest](https://hiptest.net), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
 
 The goals are:
 
- * to show how tests are exported in <language>/<framework>.
+ * to show how tests are exported in Javascript/qUnit.
  * to check exports work out of the box (well, with implemented actionwords)
 
 System under test
