@@ -99,9 +99,9 @@ var Actionwords = {
   },
 
   settingsShouldBe: function (__datatable) {
-    let settings = {}
-    __datatable.split("\n").forEach(line => {
-      let cells = line.split('|');
+    var cells, settings = {};
+    __datatable.split("\n").forEach(function(line) {
+      cells = line.split('|');
       settings[cells[1].trim()] = cells[2].trim();
     })
 
