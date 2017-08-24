@@ -11,6 +11,7 @@
   });
 
   test('Message "Empty grounds" is displayed after 30 coffees are taken', function () {
+    // Tags: priority:0
     // When I take "30" coffees
     this.actionwords.iTakeCoffeeNumberCoffees(30);
     // Then message "Empty grounds" should be displayed
@@ -18,9 +19,10 @@
   });
 
   test('When the grounds are emptied, message is removed', function () {
-    // Given I take "30" coffees
+    // Tags: priority:1
+    // When I take "30" coffees
     this.actionwords.iTakeCoffeeNumberCoffees(30);
-    // When I empty the coffee grounds
+    // And I empty the coffee grounds
     this.actionwords.iEmptyTheCoffeeGrounds();
     // Then message "Ready" should be displayed
     this.actionwords.messageMessageShouldBeDisplayed("Ready");

@@ -12,7 +12,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qunit/1.14.0/qunit.min.js"></script>
-
+    <script src ="../node_modules/qunit-reporter-junit/qunit-reporter-junit.js"></script>
+    <script>
+        QUnit.jUnitDone(function(report) {
+          if (typeof console !== 'undefined') {
+            console.log(report.xml);
+          }
+        });
+    </script>
     <script src="../src/coffee_machine.js"></script>
     <script src="actionwords.js"></script>
 
