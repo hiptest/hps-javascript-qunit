@@ -13,3 +13,6 @@ script:
 
 after_script:
   - hiptest-publisher -c javascript-qunit.conf --token=$SECRET_TOKEN --push=qunit-junit-report.xml --test-run-id=1966
+
+after_failure:
+  - hiptest-publisher -c javascript-qunit.conf --token=$SECRET_TOKEN --push=qunit-junit-report.xml --test-run-id=1966
