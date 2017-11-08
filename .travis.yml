@@ -18,7 +18,6 @@ notifications:
   webhooks:
     urls:
       - https://hiptest.net/report_global_failure/$SECRET_TOKEN/1966/
-      - http://hooks.mydomain.com/events
     on_success: never
     on_failure: never
     on_start: never
