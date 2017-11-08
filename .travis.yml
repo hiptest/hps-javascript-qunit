@@ -14,5 +14,13 @@ script:
 after_script:
   - hiptest-publisher -c javascript-qunit.conf --token=$SECRET_TOKEN --push=qunit-junit-report.xml --test-run-id=1966
 
-after_failure:
-  - hiptest-publisher -c javascript-qunit.conf --token=$SECRET_TOKEN --push=qunit-junit-report.xml --test-run-id=1966
+notifications:
+  webhooks:
+    urls:
+      - https://hiptest.net/report_global_failure/$SECRET_TOKEN/1966/
+      - http://hooks.mydomain.com/events
+    on_success: never
+    on_failure: always
+    on_start: never
+    on_cancel: never
+    on_error: never
