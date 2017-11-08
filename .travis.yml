@@ -21,5 +21,4 @@ notifications:
     on_success: never
     on_failure: never
     on_start: never
-    on_cancel: never
     on_error: always
