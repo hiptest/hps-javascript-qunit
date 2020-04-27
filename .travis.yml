@@ -5,8 +5,8 @@ sudo: false
 
 before_install:
   - npm install phantomjs
-  - rvm install 2.2
-  - rvm use 2.2
+  - rvm install 2.3
+  - rvm use 2.3
   - gem install hiptest-publisher
   - hiptest-publisher -c javascript-qunit.conf --token=$SECRET_TOKEN --only=tests --test-run-id=1966
 
